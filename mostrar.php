@@ -1,0 +1,22 @@
+  
+<!DOCTYPE html>
+<html>
+<body background="https://images.alphacoders.com/225/thumb-1920-225583.JPG" text="white"> 
+<?
+session_start();
+if 
+($_SESSION[nome]==""){
+echo "<font size=5><center><br><br><br>Voce nao esta Logado.</center></font>";
+exit;
+}
+$nome = $_SESSION[nome];
+echo "<font size=5><center><br><br>Você está logado com a sessão: $nome</center></font>";
+?>
+</form>
+</br>
+<p></p>
+<form method="POST" action="sair.php" style="text-align:center">
+<input style="font-size:30px;" type="submit" value="Encerrar sessão">
+</form>
+</body>
+</html>
